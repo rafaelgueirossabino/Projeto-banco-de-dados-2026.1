@@ -1,0 +1,12 @@
+CREATE TABLE campus (
+    id_campus INT GENERATED ALWAYS AS IDENTITY,
+    nome VARCHAR(100) NOT NULL,
+    telefone_campus VARCHAR(20),
+    rua VARCHAR(150) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    
+    CONSTRAINT pk_campus PRIMARY KEY (id_campus),
+    CONSTRAINT uq_campus_nome UNIQUE (nome)
+);
